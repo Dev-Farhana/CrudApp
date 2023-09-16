@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD DOM</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </div>
+                </div>
+          </div>
+        </nav>
+  </header>
+
+  <div class="container mt-5 col-6" >
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="CRUD App" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button id="add_btn" class="btn btn-outline-success" type="button" id="button-addon2"> ADD</button>
+        </div>
+
+        <ul id="parentList" class="list-group">
+            <li class="list-group-item d-flex justify-content-between">
+               <h3 class="flex-grow-1"> Item 1st </h3>
+                 <button class="btn btn-danger mx-3" onclick="removeItem(this)"> Remove</button>
+                 <button class="btn btn-secondary" onclick="editItem(this)"> Edit</button></li>
+      </ul>
+  </div>
+
+  <script src="./app.js"></script>
+
+  <!-- <script> -->
+<!-- 
+    let addBtn =  document.getElementById('add_btn');
+    addBtn.addEventListener('click', addChap);
+    let parentList = document.getElementById('parentList');
+
+    function addChap(e){
+        if(parentList.children[0].className === "empty"){
+            parentList.children[0].remove()
+        }
+        let currentBtn = e.currentTarget;
+        console.log(e);
+        let currentInput = currentBtn.previousElementSibling;
+        console.log(currentInput.value);
+        let currentItem = currentInput.value;
+        
+        let newli = document.createElement('li');
+        // newli.classList.add('list-group-item');
+        newli.className = "list-group-item d-flex justify-content-between";
+        newli.innerHTML = `  <li class="list-group-item d-flex justify-content-between">
+               <h3 class="flex-grow-1"> ${currentItem} </h3>
+                 <button class="btn btn-danger mx-3" onclick="removeItem(this)"> Remove</button>
+                 <button class="btn btn-secondary"> Edit</button></li> ` ;
+        // listOrder.classList.add('newli');
+        // listOrder.appendChild(newli);
+        parentList.appendChild(newli);
+    }
+
+    function removeItem(currentElement){
+        currentElement.parentElement.remove();
+            let parentList = document.getElementById('parentList');
+        // let listOrder = document.querySelector('.list-group');
+        if(parentList.children.length <= 0){
+            let newMsg = document.createElement('h4'); 
+            newMsg.classList.add("empty");
+            newMsg.textContent = "Nothing here; add items here";
+            parentList.appendChild(newMsg);
+        }
+    }
+-->
+  <!-- </script> -->
+
+
+
+</body>
+</html>
